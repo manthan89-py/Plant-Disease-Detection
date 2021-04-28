@@ -12,6 +12,9 @@
 ## Deployed App
 <a href="https://plant-disease-detection-ai.herokuapp.com/" target = "_blank">Plant-Disease-Detection-AI</a><br>
 
+#### You have to Installed all the requirments. Save all the below requirements in requirements.txt
+#### Runt this line in cmd/shell :  pip install -r requirements.txt
+
 # Requirements 
 #### click==7.1.2<br>
 #### Flask==1.1.2<br>
