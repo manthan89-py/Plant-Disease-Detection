@@ -8,4 +8,4 @@
 
 #### First check the Model section of this Repo. After that you can understand deployed app.
 
-#### Make sure if you change the model name then also change in the app.py
+#### Make sure if you change the model name then also change the name of the model argument in the app.py
