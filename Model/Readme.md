@@ -1,4 +1,6 @@
-# NOTE :-
+## NOTE :-
+
+#### If pdf or ipython notebook will not load then please check markdown filde (.md)
 
 #### I Cannot upload a large size model in github repo
 
