@@ -1,6 +1,12 @@
 # Plant-Disease-Detection
 Bases on Leaf images we are trying to predict plant disease using convolutional neural network. PyTorch implementation
 
+## Blog Link
+<a href="https://medium.com/analytics-vidhya/plant-disease-detection-using-convolutional-neural-networks-and-pytorch-87c00c54c88f">Here</a><br>
+
+## Deployed App
+<a href="https://plant-disease-detection-ai.herokuapp.com/">Plant-Disease-Detection-AI</a><br>
+
 # Requirements 
 click==7.1.2<br>
 Flask==1.1.2<br>
