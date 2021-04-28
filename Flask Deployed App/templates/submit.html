@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+{{title}}
+{% endblock pagetitle %}
+{% block body %}
+
+<div>
+  <div class="container">
+    <!-- For demo purpose -->
+    <div class="row mb-5 text-center text-white">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);""><b>{{title}}🍂</b></h1>
+      </div>
+    </div>
+    <center>
+    <div class=" col">
+          <div class="p-3 bg-white shadow rounded-lg" style="width: 30%;">
+
+            <img src={{image_url}} width="350" height="350">
+
+          </div>
+      </div>
+      </center>
+      <br>
+      <div class=" row ">
+        <div class="col mx-auto">
+          <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+
+            <h5><b>
+                {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or
+                pred==24 or pred==25 or pred==28 or pred==38 %}
+                Tips to Grow Healthy Plants :
+                {% else %}
+                Brief Descritpion :
+                {% endif %}
+              </b></h5>
+            <p>{{desc}}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mx-auto">
+          <div class="p-5 bg-white shadow rounded-lg" style="height:95%">
+            <h5><b>
+                {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or
+                pred==24 or pred==25 or pred==28 or pred==38 %}
+                Benefits :
+                {% else %}
+                Prevent This Plant Disease By follow below steps :
+                {% endif %}
+              </b></h5>
+            <p>
+              {{prevent}}
+            </p>
+          </div>
+        </div>
+
+        {% if pred!=4 %}
+        <div class="col mx-auto"">
+        <div class=" p-5 bg-white shadow rounded-lg" style="height: 95%;">
+          <center>
+            <h5><b>
+                {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or
+                pred==24 or pred==25 or pred==28 or pred==38 %}
+                Fertilizer :
+                {% else %}
+                Supplements :
+                {% endif %}
+              </b></h5>
+            <br>
+            <img src={{simage}} width="300" height="350">
+            <br>
+            <br>
+            <h6>{{sname}}</h6>
+
+            <a target="_blank" href={{buy_link}}><button type="button" class="btn btn-success"
+                style="background-color: #05380b;">Buy Product</button></a>
+          </center>
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+{% endblock body %}
