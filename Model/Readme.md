@@ -2,11 +2,7 @@
 
 #### If pdf or ipython notebook will not load then please check markdown filde (.md)
 
-#### I Cannot upload a large size model in github repo
-
-#### So you have to trained your model by yourself in your pc/laptop and 
-
-#### Save it as "plant_disease_model_1_latest.pt"
+#### I Cannot upload a large size model in github repo So you have to trained your model by yourself in your pc/laptop and Save it as "plant_disease_model_1_latest.pt"
 
 #### For flask we use this trained model
 
