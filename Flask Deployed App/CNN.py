@@ -106,19 +106,3 @@ idx_to_classes = {0: 'Apple___Apple_scab',
                   36: 'Tomato___Tomato_Yellow_Leaf_Curl_Virus',
                   37: 'Tomato___Tomato_mosaic_virus',
                   38: 'Tomato___healthy'}
-
-# disease = []
-# for index , disease_ in idx_to_classes.items():
-#     disease.append(disease_)
-
-# idx_to_class = {'index': list(range(0,39)) , 'disease_name': disease }
-
-
-# idx_to_class = pd.DataFrame(idx_to_class)
-# # print(idx_to_classes)
-# idx_to_class.to_csv('supplement_info.csv' , index=False)
-# print('done')
-
-
-# data = pd.read_csv('disease_info.csv' , encoding='cp1252')
-# print(data['image_url'][1])
