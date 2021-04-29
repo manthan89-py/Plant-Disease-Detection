@@ -3,12 +3,14 @@
 
 ## Snippet of Web App :
 #### Main page
-<img src = "demo_images/1.png" > <br><br>
-
+<img src = "demo_images/1.png" > <br>
 #### AI Engine 
-<img src = "demo_images/2.png"> <br><br>
-<img src = "demo_images/3.png"> <br><br>
-<img src = "demo_images/4.JPG"> <br><br>
+<img src = "demo_images/2.png"> <br>
+#### Results Page 
+<img src = "demo_images/3.png"> <br>
+#### Supplements/Fertilizer  Store
+<img src = "demo_images/4.JPG"> <br>
+#### Conctact Us 
 <img src = "demo_images/5.png"> <br><br>
 
 ## Testing Images
