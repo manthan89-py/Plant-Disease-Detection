@@ -1,7 +1,7 @@
-# Plant-Disease-Detection
+# ⭐Plant-Disease-Detection
 <p> Plant Disease is necessary for every farmer so we are created Plant disease detection using Deep learning. In which we are using Convoluitona neural Netowork for classifying Leaf images into 39 Different Categories. The Convolutional Neural Code build in Pytorch Framework. For Training we are using Plant village dataset. Dataset Link is in My Blog Section.</p>
 
-## Snippet of Web App :
+## ⭐Snippet of Web App :
 #### Main page
 <img src = "demo_images/1.png" > <br>
 #### AI Engine 
@@ -13,21 +13,21 @@
 #### Conctact Us 
 <img src = "demo_images/5.png"> <br><br>
 
-## Testing Images
+## ⭐Testing Images
 
 #### If you do not have leaf images then you can use test images located in test_images folder
 #### Each Image have it's disease name so you can verify model is working perfact or not.
 
-## Blog Link
+## ⭐Blog Link
 <a href="https://medium.com/analytics-vidhya/plant-disease-detection-using-convolutional-neural-networks-and-pytorch-87c00c54c88f" target = "_blank">Plant Disease Detection Using Convolutional Neural Networks with PyTorch</a><br>
 
-## Deployed App
+## ⭐Deployed App
 <a href="https://plant-disease-detection-ai.herokuapp.com/" target = "_blank">Plant-Disease-Detection-AI</a><br>
 
 #### You have to Installed all the requirments. Save all the below requirements in requirements.txt
 #### Run this line in cmd/shell :  pip install -r requirements.txt
 
-## Requirements 
+## ⭐Requirements 
 #### click==7.1.2<br>
 #### Flask==1.1.2<br>
 #### gunicorn==20.1.0<br>
