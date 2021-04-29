@@ -10,7 +10,7 @@
 <img src = "demo_images/3.png"> <br>
 #### Supplements/Fertilizer  Store
 <img src = "demo_images/4.JPG"> <br>
-#### Conctact Us 
+#### Contact Us 
 <img src = "demo_images/5.png"> <br><br>
 
 ## ⭐Testing Images
