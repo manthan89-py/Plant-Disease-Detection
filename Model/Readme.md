@@ -1,5 +1,4 @@
 # Model Architecture :
-<img src="1.JPG"><br>
 
 ## NOTE :-
 
