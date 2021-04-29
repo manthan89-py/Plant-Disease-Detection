@@ -1,5 +1,10 @@
 # Plant-Disease-Detection
-#### Bases on Leaf images we are trying to predict plant disease using convolutional neural network. PyTorch implementation
+#### Plant Disease is necessary for every farmer so we are created Plant disease detection using Deep learning. In which we are using Convoluitona neural Netowork for 
+#### classifying Leaf images into 39 Different Categories. The Convolutional Neural Code build in Pytorch Framework.
+
+## Snippet of Web App :
+<img src = "demo_images/1.png" > <br><br>
+<img src = "demo_images/2.png"> <br><br>
 
 ## Testing Images
 
