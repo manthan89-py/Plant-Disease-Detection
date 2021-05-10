@@ -7,7 +7,7 @@
 * Yo can make UI better , make Deep learning model more powerful , add informative markdown file in section...
 * Make sure your code is working. It will not have any type or error.
 * You have to fork this project then make a pull request after you testing will successful.
-* How to make pull request : 
+* How to make pull request : https://opensource.com/article/19/7/create-pull-request-github
 
 
 ## ⭐Testing Images
