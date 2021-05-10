@@ -1,5 +1,5 @@
 # ⭐Plant-Disease-Detection
-<p> Plant Disease is necessary for every farmer so we are created Plant disease detection using Deep learning. In which we are using Convoluitona neural Netowork for classifying Leaf images into 39 Different Categories. The Convolutional Neural Code build in Pytorch Framework. For Training we are using Plant village dataset. Dataset Link is in My Blog Section.</p>
+* Plant Disease is necessary for every farmer so we are created Plant disease detection using Deep learning. In which we are using Convoluitona neural Netowork for classifying Leaf images into 39 Different Categories. The Convolutional Neural Code build in Pytorch Framework. For Training we are using Plant village dataset. Dataset Link is in My Blog Section.
 
 # ⭐Contribution ( Open Source )
 * This Project is now open source.
@@ -12,8 +12,8 @@
 
 ## ⭐Testing Images
 
-#### If you do not have leaf images then you can use test images located in test_images folder
-#### Each Image have it's disease name so you can verify model is working perfact or not.
+* If you do not have leaf images then you can use test images located in test_images folder
+* Each Image have it's disease name so you can verify model is working perfact or not.
 
 ## ⭐Blog Link
 <a href="https://medium.com/analytics-vidhya/plant-disease-detection-using-convolutional-neural-networks-and-pytorch-87c00c54c88f" target = "_blank">Plant Disease Detection Using Convolutional Neural Networks with PyTorch</a><br>
