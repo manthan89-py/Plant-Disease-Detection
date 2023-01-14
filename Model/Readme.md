@@ -5,7 +5,7 @@
 <ul>
   <li>If pdf or ipython notebook will not load then please check markdown filde (.md)
   </li>
-<li>I am not able to upload a large size model in github repo So you have to trained your model by yourself in your pc/laptop and Save as "plant_disease_model_1_latest.pt"</li>
+<li>Download the plant_disease_model_1_latest.pt file from <a href="https://drive.google.com/drive/folders/1ewJWAiduGuld_9oGSrTuLumg9y62qS6A?usp=share_link">Here</a></li>
 
 <li> For flask we use this trained model </li>
 
