@@ -1,9 +1,9 @@
 # ⭐Plant-Disease-Detection
-* Plant Disease is necessary for every farmer so we are created Plant disease detection using Deep learning. In which we are using Convoluitona neural Netowork for classifying Leaf images into 39 Different Categories. The Convolutional Neural Code build in Pytorch Framework. For Training we are using Plant village dataset. Dataset Link is in My Blog Section.
+* Plant Disease is necessary for every farmer so we are created Plant disease detection using Deep learning. In which we are using convolutional Neural Network for classifying Leaf images into 39 Different Categories. The Convolutional Neural Code build in Pytorch Framework. For Training we are using Plant village dataset. Dataset Link is in My Blog Section.
 
 ## ⭐Run Project in your Machine
 * You must have python install in your machine.
-* Create a Python Virutal Environment & Activate Virutal Environment [Link](https://docs.python.org/3/tutorial/venv.html)
+* Create a Python Virtual Environment & Activate Virtual Environment [Link](https://docs.python.org/3/tutorial/venv.html)
 * Install all the dependencies using below command
     `pip install -r requirements.txt`
 * Go to the `Flask Deployed App` folder.
