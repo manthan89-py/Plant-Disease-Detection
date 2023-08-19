@@ -25,7 +25,7 @@
 ## ⭐Testing Images
 
 * If you do not have leaf images then you can use test images located in test_images folder
-* Each Image have it's disease name so you can verify model is working perfact or not.
+* Each image has its corresponding disease name, so you can verify whether the model is working perfectly or not
 
 ## ⭐Blog Link
 <a href="https://medium.com/analytics-vidhya/plant-disease-detection-using-convolutional-neural-networks-and-pytorch-87c00c54c88f" target = "_blank">Plant Disease Detection Using Convolutional Neural Networks with PyTorch</a><br>
