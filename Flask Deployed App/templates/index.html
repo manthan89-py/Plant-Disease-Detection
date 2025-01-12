@@ -10,7 +10,8 @@ AI Engine
         <!-- For demo purpose -->
         <div class="row mb-5 text-center text-white">
             <div class="col-lg-10 mx-auto">
-                <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍀AI Engine🍀</b></h1>
+                <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍀AI
+                        Engine🍀</b></h1>
                 <p class="lead" style="font-weight: 500;color: black;">Let AI Engine Will Help You To Detect Disease</p>
             </div>
         </div>
@@ -41,8 +42,21 @@ AI Engine
                         <div class="custom-file overflow-hidden mb-4">
                             <input type="file" id="actual-btn" hidden name="image" />
                             <label for="actual-btn">Choose File</label>
+                            <label id="camera-btn">Open Camera</label>
+
+                            </br>
                             <span id="file-chosen">No file chosen</span>
                         </div>
+
+                        <!-- Camera feed container (hidden initially) -->
+                        <div id="camera-container" style="display: none;">
+                            <video id="camera-feed" width="320" height="240" autoplay></video>
+                            <button type="button" id="capture-btn">Capture Photo</button>
+                        </div>
+
+                        <!-- Preview Image (will show the captured photo) -->
+                        <img id="preview" src="#" alt="Camera Photo Preview" style="display: none; max-width: 100%;" />
+
 
                         <!-- End -->
 
@@ -81,12 +95,147 @@ AI Engine
 
 <script>
     const actualBtn = document.getElementById('actual-btn');
+    const captureBtn = document.getElementById('capture-btn');
 
     const fileChosen = document.getElementById('file-chosen');
 
     actualBtn.addEventListener('change', function () {
         fileChosen.textContent = this.files[0].name
     })
+
+
+    let capturedFile = null; // Variable to hold the captured file
+
+    document.getElementById('camera-btn').addEventListener('click', function () {
+        // Show the camera container
+        document.getElementById('camera-container').style.display = 'block';
+
+        // Start the camera feed
+        startCamera();
+    });
+
+    // Start the camera feed using the getUserMedia API
+    function startCamera() {
+        const cameraFeed = document.getElementById('camera-feed');
+
+        // Request access to the user's camera
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                // Set the camera feed source to the stream
+                cameraFeed.srcObject = stream;
+            })
+            .catch(function (error) {
+                console.log('Error accessing the camera: ', error);
+            });
+    }
+
+    // Capture photo from the camera feed
+    document.getElementById('capture-btn').addEventListener('click', function () {
+        const cameraFeed = document.getElementById('camera-feed');
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas dimensions to match the video feed dimensions
+        canvas.width = cameraFeed.videoWidth;
+        canvas.height = cameraFeed.videoHeight;
+
+        // Draw the current frame from the video feed onto the canvas
+        ctx.drawImage(cameraFeed, 0, 0, canvas.width, canvas.height);
+
+        // Convert the canvas image to a data URL
+        const dataUrl = canvas.toDataURL('image/jpeg');
+
+        // Create a new file from the data URL
+        const imageBlob = dataURItoBlob(dataUrl);
+        capturedFile = new File([imageBlob], "camera_image.jpg", { type: 'image/jpeg' });
+
+        // Now you have a file object that you can use locally
+        document.getElementById('file-chosen').textContent = capturedFile.name;
+
+        // Show the captured image preview
+        const preview = document.getElementById('preview');
+        preview.src = dataUrl;
+        preview.style.display = 'block'; // Show the preview
+    });
+
+    // Helper function to convert data URL to Blob
+    function dataURItoBlob(dataURI) {
+        const byteString = atob(dataURI.split(',')[1]);
+        const arrayBuffer = new ArrayBuffer(byteString.length);
+        const uintArray = new Uint8Array(arrayBuffer);
+        for (let i = 0; i < byteString.length; i++) {
+            uintArray[i] = byteString.charCodeAt(i);
+        }
+        return new Blob([uintArray], { type: 'image/jpeg' });
+    }
+
+    // Set up the "Choose File" input to trigger when the image is captured
+    document.getElementById('actual-btn').addEventListener('click', function () {
+        // Use the captured image file as the input file for form submission
+        if (capturedFile) {
+            const dataTransfer = new DataTransfer(); // Create a DataTransfer object
+            dataTransfer.items.add(capturedFile); // Add the captured file to the DataTransfer object
+            document.getElementById('actual-btn').files = dataTransfer.files; // Assign the file to the input
+        }
+    });
+
+
+
+
+    // Start the camera feed
+    async function startCamera() {
+        const videoElement = document.getElementById('camera-feed');
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            videoElement.srcObject = stream;
+        } catch (err) {
+            console.error('Error accessing the camera: ', err);
+        }
+    }
+
+    // Capture the image from the video feed
+    document.getElementById('capture-btn').addEventListener('click', function () {
+        const video = document.getElementById('camera-feed');
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+
+        // Set canvas size equal to video size
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+
+        // Draw the video frame onto the canvas
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        // Convert the image to a data URL and create a file input
+        const dataUrl = canvas.toDataURL('image/png');
+        const fileInput = document.getElementById('captured-image');
+        const file = dataUrlToFile(dataUrl, 'captured-image.png');
+
+        // Create a File object from the base64 image data
+        const dataTransfer = new DataTransfer();
+        dataTransfer.items.add(file);
+        fileInput.files = dataTransfer.files;
+
+        // Hide the camera feed and display the chosen file text
+        document.getElementById('camera-container').style.display = 'none';
+        document.getElementById('file-chosen').innerText = 'Image Captured';
+    });
+
+    // Convert base64 image data to a file object
+    function dataUrlToFile(dataUrl, filename) {
+        const arr = dataUrl.split(',');
+        const mime = arr[0].match(/:(.*?);/)[1];
+        const bstr = atob(arr[1]);
+        const n = bstr.length;
+        const u8arr = new Uint8Array(n);
+
+        while (n--) {
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+
+        return new File([u8arr], filename, { type: mime });
+    }
+
 </script>
 
 {% endblock body %}
